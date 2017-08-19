@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+        {% for photo in photos %}
+        <div class="any"
+          data-img="/img/{{ photo }}">
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

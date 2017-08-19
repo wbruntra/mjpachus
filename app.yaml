@@ -1,0 +1,41 @@
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /swipebox
+  static_dir: swipebox/src
+
+- url: /vendor
+  static_dir: grayscale/vendor
+
+- url: /fotorama
+  static_dir: fotorama
+
+- url: /galereya
+  static_dir: galereya
+
+- url: /justified
+  static_dir: justifiedgallery
+
+- url: /(.*\.(gif|jpg|js|css|png))
+  static_files: public/\1
+  upload: public/(.*)
+
+- url: /(.*\.JPG)
+  static_files: public/\1
+  upload: public/(.*)
+  mime_type: image/jpg
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: jinja2
+  version: latest

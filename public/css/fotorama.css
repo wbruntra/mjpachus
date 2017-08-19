@@ -1,0 +1,15 @@
+.fotorama .any {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    font-family: Georgia, serif;
+    font-size: 72px;
+    text-align: center;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 100px;
+    line-height: normal;
+}
+
+.fotorama .inverse {
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+}

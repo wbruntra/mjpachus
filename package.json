@@ -1,0 +1,20 @@
+{
+  "name": "app-engine-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "stylus source/stylesheets -o public/css",
+    "watch": "stylus -w source/stylesheets -o public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wbruntra/python-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "stylus": "^0.54.5"
+  }
+}

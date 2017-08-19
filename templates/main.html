@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block stylesheets %}
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+      <h1>Photo Gallery Page</h1>
+      <p>Click to look at the styles</p>
+      <ol>
+        <li>
+          <a href="/gallery/fotorama">Fotorama</a>
+        </li>
+        <li>
+          <a href="/gallery/galereya">Galereya</a>
+        </li>
+        <li>
+          <a href="/gallery/justified">Justified</a>
+        </li>
+      </ol>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
+{% endblock %}

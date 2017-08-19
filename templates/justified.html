@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="/justified/justifiedGallery.min.css">
+  <link rel="stylesheet" href="/swipebox/css/swipebox.min.css">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+      <div id="gallery">
+        {% for photo in photos %}
+        <a class="swipebox-image" href="/img/portfolio/{{ photo }}" rel="gallery1">
+          <img src="/img/thumbs/{{ photo }}">
+        </a>
+        {% endfor %}
+      </div>
+
+      </div>
+    </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="/justified/jquery.justifiedGallery.min.js"></script>
+    <script type="text/javascript" src="/swipebox/js/jquery.swipebox.min.js"></script>
+    <script src="/js/justified.js"></script>
+{% endblock %}

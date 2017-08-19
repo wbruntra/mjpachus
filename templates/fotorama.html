@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block stylesheets %}
+<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+<link  href="/css/fotorama.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/fotorama-custom.css">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <div class="fotorama"
+  data-width="100%"
+  data-height="100%"
+  data-nav="thumbs"
+  >
+    {% for photo in photos %}
+      <a href="/img/portfolio/{{ collection }}/{{ photo }}"><img src="/img/portfolio/{{ collection }}/thumbs/{{ photo }}"></a>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+{% endblock %}
+  </body>
+</html>

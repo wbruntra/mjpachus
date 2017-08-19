@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block stylesheets %}
+    <link  href="/galereya/css/jquery.galereya.css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+      <div id="gal1" class="galereya">
+        {% for photo in photos %}
+        <img src="/img/thumbs/{{ photo }}"
+          alt="A great photo"
+          data-fullsrc="/img/portfolio/{{ photo }}">
+        {% endfor %}
+      </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript" src="/galereya/js/jquery.galereya.min.js"></script>
+<script type="text/javascript" src="/js/galereya.js"></script>
+{% endblock %}
