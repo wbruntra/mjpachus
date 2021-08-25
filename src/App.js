@@ -1,11 +1,7 @@
 import { useState, useEffect } from 'react'
-import smoothScroll from 'smoothscroll'
 import './styles/grayscale.css'
 import './styles/grayscale-custom.scss'
 import SpainFlag from './img/spain-flag.png'
-import CoverOne from './img/portfolio/1/thumbs/IMG_9212.JPG'
-import CoverTwo from './img/portfolio/2/thumbs/IMG_7883.JPG'
-import CoverThree from './img/portfolio/3/thumbs/IMG_0484.JPG'
 import { useScrollYPosition } from 'react-use-scroll-position'
 
 function App() {
@@ -118,17 +114,26 @@ function App() {
               <ul className="list-inline col-xs-offset-1">
                 <li className="col-xs-3">
                   <a href="/gallery/1">
-                    <img alt="cover-one" src={CoverOne} />
+                    <img
+                      alt="cover-one"
+                      src={`https://yandry5579nervous.s3.amazonaws.com/img/portfolio/1/thumbs/IMG_8512.JPG`}
+                    />
                   </a>
                 </li>
                 <li className="col-xs-3 col-xs-offset-1">
                   <a href="/gallery/2">
-                    <img alt="cover-two" src={CoverTwo} />
+                    <img
+                      alt="cover-two"
+                      src={`https://yandry5579nervous.s3.amazonaws.com/img/portfolio/2/thumbs/IMG_7883.JPG`}
+                    />
                   </a>
                 </li>
                 <li className="col-xs-3 col-xs-offset-1">
                   <a href="/gallery/3">
-                    <img alt="cover-three" src={CoverThree} />
+                    <img
+                      alt="cover-three"
+                      src={`https://yandry5579nervous.s3.amazonaws.com/img/portfolio/3/thumbs/IMG_0484.JPG`}
+                    />
                   </a>
                 </li>
               </ul>
