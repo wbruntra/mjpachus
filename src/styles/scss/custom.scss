@@ -1,0 +1,51 @@
+@import 'variables.scss';
+
+body {
+  color: $lightGray;
+}
+.navbar-custom {
+  background: rgba(0,0,0,0.5);
+}
+.btn-default {
+  border: 1px solid $brightRed;
+  color: $brightRed;
+  background-color: transparent;
+}
+.btn-default:hover,
+.btn-default:focus {
+  border: 1px solid $brightRed;
+  outline: none;
+  color: #000;
+  background-color: $brightRed;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: $darkRed;
+}
+.navbar-custom a {
+  color: #fff;
+}
+ul.list-inline li a img {
+  width: 100%;
+  border: 2px solid $lightGray;
+}
+img.flag {
+  width: 36px;
+}
+#galleries {
+  min-height: 700px;
+}
+#follow {
+  min-height: 710px;
+}
+@media (max-width: 769px) {
+  .intro-body {
+    padding-top: 240px;
+  }
+}
+@media (max-width: 530px) {
+  .intro-body {
+    padding-top: 180px;
+  }
+}
