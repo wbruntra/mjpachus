@@ -1,0 +1,21 @@
+@import './scss/variables';
+
+.image-gallery {
+  height: 100vh;
+  /* width: 60%; */
+}
+
+.image-gallery-icon:hover {
+  color: $darkRed
+}
+
+.image-gallery-thumbnail {
+  &.active,
+  &:focus {
+    border: 4px solid $darkRed;
+  }
+  &:hover {
+    border: 4px solid $brightRed;
+  }
+}
+
