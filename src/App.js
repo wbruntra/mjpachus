@@ -38,14 +38,14 @@ function App() {
       <nav className={`navbar navbar-custom navbar-fixed-top ${!atTop && 'top-nav-collapse'}`}>
         <div className="container">
           <div className="navbar-header">
-            <button
+            {/* <button
               type="button"
               className="navbar-toggle"
               data-toggle="collapse"
               data-target=".navbar-main-collapse"
             >
               Menu <i className="fa fa-bars" />
-            </button>
+            </button> */}
             <Scrollchor to="#page-top" className="navbar-brand page-scroll">
               <span className="light">María Jesús</span> Peña
             </Scrollchor>
