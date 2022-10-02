@@ -1,8 +1,13 @@
-import { useState, useEffect } from 'react'
 import './styles/grayscale.css'
 import './styles/grayscale-custom.scss'
+
+import { useEffect, useState } from 'react'
+
+import React from 'react'
+import { Scrollchor } from 'react-scrollchor'
 import SpainFlag from './img/spain-flag.png'
 import UnionJack from './img/union-jack.png'
+import pageTexts from './pageText'
 import { useScrollYPosition } from 'react-use-scroll-position'
 
 function App() {
@@ -26,65 +31,7 @@ function App() {
     }
   }, [scrollY])
 
-  const texts = {
-    en: {
-      otherFlag: SpainFlag,
-      intro: (
-        <p className="intro-text">
-          Beauty is in the
-          <br />
-          eye of the beholder
-        </p>
-      ),
-      middle: (
-        <>
-          <p>
-            Black and white photography captures the essence of a scene without distraction,
-            without words, without the need for superfluous ornamentation. The mere contrast
-            between light and shadow is capable of expressing abstract concepts.
-          </p>
-          <p>
-            Black and white represent the undeniable duality present in life as in the yin and
-            yang, reality versus virtuality, dreams versus rationality.
-          </p>
-          <p>
-            Each shot is the result of critical reflection in search of lost essence and
-            self-knowledge.
-          </p>
-        </>
-      ),
-    },
-    es: {
-      otherFlag: UnionJack,
-      intro: (
-        <p class="intro-text">
-          La belleza está
-          <br />
-          en los ojos del que mira
-        </p>
-      ),
-      middle: (
-        <>
-          <p>
-            La fotografía en blanco y negro es capaz de captar el alma de la escena sin
-            distracción, sin palabras, sin necesidad de adornos superfluos. Solo a través del
-            contraste de la luz y la sombra, una imagen puede llegar a expresar conceptos
-            abstractos.
-          </p>
-          <p>
-            El blanco y el negro implica la dualidad incuestionablemente presente en la vida como
-            el yin y el yang, la realidad versus la virtualidad, el sueño versus la razón. La
-            efemeridad, realidad, paso del tiempo, evolución, arquitectura o simplemente la belleza
-            de una flor es plasmada en su esencia, transformada, recreada, inmortalizada.
-          </p>
-          <p>
-            Cada captura es el resultado de una reflexión crítica en busca de la esencia perdida,
-            del conocimiento personal.
-          </p>
-        </>
-      ),
-    },
-  }
+  const texts = pageTexts
 
   return (
     <div>
@@ -99,9 +46,9 @@ function App() {
             >
               Menu <i className="fa fa-bars" />
             </button>
-            <a className="navbar-brand page-scroll" href="#page-top">
+            <Scrollchor to="#page-top" className="navbar-brand page-scroll">
               <span className="light">María Jesús</span> Peña
-            </a>
+            </Scrollchor>
           </div>
 
           <div className="collapse navbar-collapse navbar-right navbar-main-collapse">
@@ -110,19 +57,19 @@ function App() {
                 <a href="#page-top" />
               </li>
               <li>
-                <a className="page-scroll" href="#about">
+                <Scrollchor to="#about" className="page-scroll">
                   Profile
-                </a>
+                </Scrollchor>
               </li>
               <li>
-                <a className="page-scroll" href="#galleries">
+                <Scrollchor to="#galleries" className="page-scroll">
                   Galleries
-                </a>
+                </Scrollchor>
               </li>
               <li>
-                <a className="page-scroll" href="#follow">
+                <Scrollchor to="#follow" className="page-scroll">
                   Connect
-                </a>
+                </Scrollchor>
               </li>
             </ul>
           </div>
@@ -137,9 +84,11 @@ function App() {
                 <h1 className="brand-heading">Pachus</h1>
                 {texts[language].intro}
                 <button className="btn btn-circle page-scroll">
-                  <a href="#about">
+                  {/* <a href="#about">
+                  </a> */}
+                  <Scrollchor to="#about" className="nav-link">
                     <i className="fa fa-angle-double-down animated" />
-                  </a>
+                  </Scrollchor>
                 </button>
               </div>
             </div>
@@ -158,7 +107,7 @@ function App() {
                   onClick={() => {
                     toggleLanguage()
                   }}
-                  alt="spanish-flag"
+                  alt={`flag-${language}`}
                   src={texts[language].otherFlag}
                 />
               </a>
